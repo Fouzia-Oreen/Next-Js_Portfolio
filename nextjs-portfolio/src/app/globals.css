@@ -9,4 +9,25 @@
     .hero-ring {
         @apply absolute inset-0  border-2 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border-emerald-300/5 shadow-[0_0_80px_inset] shadow-emerald-300/5
     }
+    /* .star-annimate {
+        @keyframes  {
+            0% {
+                opacity: .25;
+                transform:scale(20%)
+            }
+            50% {
+                opacity: 1;
+                transform:scale(100%)
+            }
+            100% {
+                opacity: .25;
+                transform:scale(100%)
+            }
+        }
+    } */
+}
+@layer utilities {
+    .container {
+        @apply lg:max-w-5xl;
+    }
 }
