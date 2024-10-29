@@ -1,4 +1,5 @@
 import AboutSection from "@/sections/About";
+import ContactSection from "@/sections/Contact";
 import FeaturedProjectSection from "@/sections/FeaturedProject";
 import Header from "@/sections/Header";
 import HeroSection from "@/sections/Hero";
@@ -14,6 +15,7 @@ export default function Home() {
      <TapeSection />
      <TestimonialSection />
      <AboutSection />
+     <ContactSection />
     </div>
   );
 }
