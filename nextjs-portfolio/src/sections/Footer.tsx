@@ -30,7 +30,7 @@ const FooterSection = () => {
             <div className='text-white/40'>&copy; 2024. All rights reserved</div>
             <nav className='flex flex-col items-center gap-8 md:flex-row'>
                 {links.map((link) => (
-                <Link href={link.href} className='inline-flex items-center gap-1.5' >
+                <Link href={link.href} key={link.title} className='inline-flex items-center gap-1.5' >
                     <span className='font-semibold'>{link.title}</span>
                     <ArrowUpRightIcon className="size-4"/>
                 </Link>
