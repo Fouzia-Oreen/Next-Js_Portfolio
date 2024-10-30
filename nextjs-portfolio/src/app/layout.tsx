@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import {Inter, Calistoga} from 'next/font/google';
 import {twMerge} from 'tailwind-merge'
 import "./globals.css";
+import  ActiveSectionContextProvider  from "@/context/ActiveSectionContext";
+import Header from "@/sections/Header";
 
 const inter = Inter({
   variable: "--font-sans",
@@ -32,7 +34,11 @@ export default function RootLayout({
           calistoga.variable,
           "bg-gray-900 text-white antialiased font-sans" )}
       >
-        {children}
+        <ActiveSectionContextProvider>
+          <Header />
+          {children}
+        </ActiveSectionContextProvider>
+        
       </body>
     </html>
   );

@@ -1,11 +1,12 @@
 'use client'
-import StarIcon from '@/assets/icons/star.svg';
 import SparkleIcon from '@/assets/icons/sparkle.svg';
-
+import StarIcon from '@/assets/icons/star.svg';
+import Me from '@/assets/images/me.png';
 import grainImage from '@/assets/images/grain.jpg';
 import memojiImage from "@/assets/images/memoji-computer.png";
-import {HeroOrbit} from '@/components/HeroOrbit';
+import { HeroOrbit } from '@/components/HeroOrbit';
 import Image from 'next/image';
+import Link from 'next/link';
 import { GoArrowDown } from "react-icons/go";
 
 const HeroSection = () => {
@@ -52,7 +53,10 @@ const HeroSection = () => {
         </div>
         <div className="container">
             <div className='flex flex-col items-center'>
-            <Image src={memojiImage} alt='heroImage'className='size-[100px]'/>
+                <div className='bg-slate-400/15 rounded-full -mb-3 size-[100px]'>
+                <Image src={Me} alt='heroImage'className='object-fit'/>
+                </div>
+            
             <div className='bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center gap-4 rounded-lg'>
                 <div className='bg-green-500 size-2.5 rounded-full relative'>
                 <div className='bg-green-500 size-2.5 rounded-full animate-ping-large absolute inset-0'> 
@@ -62,7 +66,7 @@ const HeroSection = () => {
             </div>
             </div>
             <div className="max-w-lg mx-auto">
-            <h1 className='font-serif text-3xl md:text-5xl text-center mt-4 tracking-wide'>Building Exceptional User Experiences</h1>
+            <h1 className='font-serif text-3xl md:text-5xl text-center mt-4 tracking-wide'>Hello I&apos;m Fouzia from Bangladesh</h1>
             <p className='mt-4 text-center text-white/60 md:text-lg'>I specialized in transforming designs into functional, high-performing web applications. Let&apos;s discuss your next Project</p>
             </div>
             <div className='flex flex-col md:flex-row justify-center items-center mt-8 gap-4'>
@@ -70,10 +74,10 @@ const HeroSection = () => {
                     <span>Explore My Work</span> 
                     <GoArrowDown className="size-5" />
                 </button>
-                <button className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl'>
+                <Link href='@/assets/images/CV.jpg' className='inline-flex items-center gap-2 border border-white bg-white text-gray-900 px-6 h-12 rounded-xl'>
                     <span>👋</span> 
                     <span className="font-semibold">Let&apos;s Connect</span> 
-                </button>
+                </Link>
             </div>
         </div>
     </div>
